@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {satoshiRegular, satoshiLight} from "../app/layout";
+import {satoshiRegular, satoshiLight} from "../components/fonts";
 
 interface BlogCard {
     title: string,

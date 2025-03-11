@@ -2,7 +2,7 @@
 import {motion} from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
-import {satoshiBold, satoshiLight} from "../app/layout";
+import {satoshiBold, satoshiLight} from "../components/fonts";
 
 interface Article {
     title: string;

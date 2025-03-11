@@ -3,7 +3,7 @@
 import BlogCard from "@/components/BlogCard";
 import Navbar from "@/components/Navbar";
 import { motion } from "motion/react";
-import {satoshiMedium} from "../layout";
+import {satoshiMedium} from "../../components/fonts";
 import { useQuery } from "@tanstack/react-query";
 import { memo } from "react";
 

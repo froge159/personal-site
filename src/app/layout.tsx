@@ -1,33 +1,9 @@
 "use client"
-import localFont from "next/font/local";
 import "./globals.css";
 import {AnimatePresence, motion} from "motion/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-export const satoshiMedium = localFont({
-	src: '../../public/fonts/Satoshi-Medium.otf',
-	style: 'normal',
-	variable: '--font-satoshiMedium'
-})
 
-export const satoshiLight = localFont({
-	src: '../../public/fonts/Satoshi-Light.otf',
-	style: 'normal',
-	variable: '--font-satoshiLight'
-})
-
-export const satoshiRegular = localFont({
-	src: '../../public/fonts/Satoshi-Regular.otf',
-	style: 'normal',
-	variable: '--font-satoshiRegular'
-})
-
-
-export const satoshiBold = localFont({
-	src: '../../public/fonts/Satoshi-Bold.otf',
-	style: 'normal',
-	variable: '--font-satoshiBold'
-})
 
 const queryClient = new QueryClient();
 
@@ -52,5 +28,5 @@ export default function RootLayout({children}: {children: React.ReactNode;}) {
 		</html>
 	</QueryClientProvider>
 	);
-  }
+}
   

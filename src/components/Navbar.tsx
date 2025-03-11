@@ -3,7 +3,7 @@ import Link from "next/link";
 import pfp from "../../public/images/defaultfrog 3.png";
 import {motion} from "motion/react";
 import {useState} from "react";
-import {satoshiBold, satoshiRegular} from "../app/layout";
+import {satoshiBold, satoshiRegular} from "../components/fonts";
 
 
 

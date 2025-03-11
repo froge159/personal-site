@@ -4,7 +4,7 @@ import SVGContainer from '../components/SVGContainer'
 import BlogCard from '../components/BlogCard'
 import {useState} from "react";
 import { motion } from "motion/react"
-import { satoshiMedium } from "../app/layout";
+import { satoshiMedium } from "../components/fonts";
 import { useQuery } from '@tanstack/react-query';
 
 
