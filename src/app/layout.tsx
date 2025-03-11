@@ -1,6 +1,6 @@
 "use client"
 import "./globals.css";
-import {AnimatePresence, motion} from "motion/react";
+import {AnimatePresence} from "motion/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
@@ -14,15 +14,7 @@ export default function RootLayout({children}: {children: React.ReactNode;}) {
 			<head><title>froge159</title></head>
 			<body className={`w-full h-full min-h-screen text-white overflow-x-hidden`}>
 				<AnimatePresence>
-					<motion.div
-						initial={{opacity: 0}}
-						animate={{opacity: 1}}
-						exit={{opacity: 0}}
-						transition={{duration: 0.3}}
-						key={Math.random()}>
-							
-						{children}
-					</motion.div>
+					{children}
 				</AnimatePresence>
 			</body>
 		</html>
