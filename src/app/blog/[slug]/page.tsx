@@ -22,7 +22,8 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function BlogPage({params} : {params: {slug: string}}) {
+
+export default async function BlogPage({params} : {params: Promise<{slug: string}>}) {
     const {slug} = await params;
     const response = await fetch(`${STRAPI_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`);
     const data = await response.json();
