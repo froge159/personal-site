@@ -15,8 +15,8 @@ export default function RootLayout({children}: {children: React.ReactNode;}) {
 			<body className={`w-full h-full min-h-screen text-white overflow-x-hidden`}>
 				<AnimatePresence>
 					{children}
-					<Analytics key="1"/>
 				</AnimatePresence>
+				<Analytics/>
 			</body>
 		</html>
 	</QueryClientProvider>
