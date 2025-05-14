@@ -12,6 +12,7 @@ interface Article {
 
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
+
 export async function generateStaticParams() {
     const response = await fetch(`${STRAPI_URL}/api/articles?populate=*`);
     const data = await response.json();
@@ -22,15 +23,14 @@ export async function generateStaticParams() {
     }));
 }
 
-
 export default async function BlogPage({params} : {params: Promise<{slug: string}>}) {
     const {slug} = await params;
     const response = await fetch(`${STRAPI_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`);
     const data = await response.json();
     const article: Article = data.data[0];
-
+    
     if (!article) {notFound(); }
-
+    
     return (
         <BlogPageContent article={article}/>
     )

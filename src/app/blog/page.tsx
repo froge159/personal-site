@@ -16,7 +16,6 @@ interface Article {
 
 const MemoizedBlogCard = memo(BlogCard);
 
-
 export default function Blog() {
     const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
@@ -32,7 +31,7 @@ export default function Blog() {
 	};
 	
 	const {data, isLoading} = useQuery({queryKey: ["articles"], queryFn: fetchArticles});
-
+    
 	if (isLoading) return <div></div>
     
     
@@ -46,7 +45,7 @@ export default function Blog() {
             <div className="relative top-[140px] left-[7.7vw]">
                 <h3 className={`${satoshiMedium.variable} font-medium`}>all blogs</h3>
                 <ul className="mt-5">
-                    {data?.data?.slice(0,3).map((article: Article) => {
+                    {data?.data?.map((article: Article) => {
                         return <div key={article.slug} className="mb-8"><MemoizedBlogCard title={article.title} desc = {article.description} date = {article.date}  slug={article.slug}/></div>
                     })}
                 </ul>
