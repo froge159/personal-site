@@ -11,6 +11,7 @@ interface Article {
 }
 
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+export const revalidate = 3600;
 
 
 export async function generateStaticParams() {
